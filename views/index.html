@@ -1,17 +1,13 @@
 {% extends 'layout.html' %} {% block title %}My Page{% endblock %} {% block head %} {% parent %}
 <link rel="stylesheet" href="/css/index.css">
-<script src="/scripts/index.js"></script> {% endblock %} {% block content %}
-<div class="hand" id="thumb">
-    <div class="finger"></div>
-    <div class="finger"></div>
-    <div class="finger"></div>
-    <div class="finger"></div>
-    <div class="finger thumb"></div>
-    <div class="arm"></div>
-</div>
-<span class="hide" id="animation">+1</span>
-<script src="/scripts/jquery.js"></script>
-<script src="/scripts/system.js"></script>
+<script src="/scripts/index.js"></script> 
+<script src="https://cdn.bootcss.com/x-tag/1.5.11/x-tag-core.js"></script>
+<script src="/scripts/tag.es6"></script> 
+{% endblock %} 
+{% block content %}
+<x-praise></x-praise>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/systemjs/0.21.3/system.js"></script>
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="/scripts/indexadd.js"></script>
 <script>
