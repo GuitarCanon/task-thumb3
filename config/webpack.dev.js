@@ -31,16 +31,20 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                  fallback: "style-loader",
-                  use: "css-loader"
+                    fallback: "style-loader",
+                    use: "css-loader"
                 })
-              }
+            }
         ]
     },
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"dev"',
         }),
-        new ExtractTextPlugin("css/[name]-[hash:5].css")
+        new ExtractTextPlugin("css/[name]-[hash:5].css"),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'scripts/common/vendor-[hash:5].min.js',
+        }),
     ]
 }

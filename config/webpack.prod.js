@@ -54,6 +54,10 @@ module.exports = {
             cssProcessor: require('cssnano'),
             cssProcessorOptions: { safe: true, discardComments: { removeAll: true } },
             canPrint: true
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'scripts/common/vendor-[hash:5].min.js',
+        }),
     ]
 }
