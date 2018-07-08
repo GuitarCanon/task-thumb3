@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: {
         index: [
@@ -59,5 +59,15 @@ module.exports = {
             name: 'vendor',
             filename: 'scripts/common/vendor-[hash:5].min.js',
         }),
+        new HtmlWebpackPlugin({
+            filename: '../views/layout.html',
+            template: 'src/views/layout.html',
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: '../views/index.html',
+            template: 'src/views/index.html',
+            
+        })
     ]
 }

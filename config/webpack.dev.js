@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: {
         index: [
@@ -46,5 +46,21 @@ module.exports = {
             name: 'vendor',
             filename: 'scripts/common/vendor-[hash:5].min.js',
         }),
+        new HtmlWebpackPlugin({
+            filename: '../views/layout.html',
+            template: 'src/widget/layout.html',
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: '../views/index.html',
+            template: 'src/views/index.js',
+            inject: false,
+            chunks: ['vendor', 'index', 'tag']
+        }),
+        new HtmlWebpackPlugin({
+            filename: '../widget/index.html',
+            template: 'src/widget/index.html',
+            inject: false
+        })
     ]
 }
