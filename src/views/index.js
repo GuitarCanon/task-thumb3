@@ -11,4 +11,5 @@ module.exports = function (templateParams) {
         webAssetsHelp.scripts +
         "{% endblock %}";
     return _html;
+
 }
