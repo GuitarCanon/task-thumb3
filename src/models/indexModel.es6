@@ -5,7 +5,7 @@ class indexModel {
     }
     updateNum() {
         const options = {
-            uri: 'http://localhost:8081/task-node/praisethumb.php',
+            uri: 'http://localhost:8081/task-thumb3/praisethumb.php',
             method: 'GET'
         }
 

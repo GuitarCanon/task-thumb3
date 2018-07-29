@@ -1,3 +1,4 @@
+import css from '../css/index.css';
 let f = '';
 class PraiseButton{
     constructor(num,element){

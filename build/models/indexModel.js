@@ -25,7 +25,7 @@ var indexModel = function () {
         key: 'updateNum',
         value: function updateNum() {
             var options = {
-                uri: 'http://localhost:8081/task-node/praisethumb.php',
+                uri: 'http://localhost:8081/task-thumb3/praisethumb.php',
                 method: 'GET'
             };
 

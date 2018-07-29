@@ -1,7 +1,9 @@
 {% extends 'layout.html' %} {% block title %}My Page{% endblock %} {% block head %} {% parent %}
 <link rel="stylesheet" href="/css/index.css">
-<script src="/scripts/index.js"></script> {% endblock %} {% block content %}
-<div class="hand" id="thumb">
+<script src="/scripts/index.js"></script> 
+<script src="/scripts/tag.es6"></script>
+{% endblock %} {% block content %}
+<!-- <div class="hand" id="thumb">
     <div class="finger"></div>
     <div class="finger"></div>
     <div class="finger"></div>
@@ -9,10 +11,9 @@
     <div class="finger thumb"></div>
     <div class="arm"></div>
 </div>
-<span class="hide" id="animation">+1</span>
-<script src="/scripts/jquery.js"></script>
+<span class="hide" id="animation">+1</span> -->
+<x-praise></x-praise>
 <script src="/scripts/system.js"></script>
-<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="/scripts/indexadd.js"></script>
 <script>
     SystemJS.config({
